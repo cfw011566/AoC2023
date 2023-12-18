@@ -1,7 +1,6 @@
 const std = @import("std");
 
 const example = @embedFile("example.txt");
-const example2 = @embedFile("example2.txt");
 const input = @embedFile("input.txt");
 
 pub fn main() !void {
