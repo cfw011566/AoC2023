@@ -118,11 +118,7 @@ fn printBoard(board: [][]Node, origin: bool) void {
             if (node.score) |s| {
                 std.debug.print("{d}", .{s % 10});
             } else {
-                if (origin) {
-                    std.debug.print("{c}", .{node.char});
-                } else {
-                    std.debug.print(".", .{});
-                }
+                std.debug.print("{c}", .{if (origin) node.char else '.'});
             }
         }
         std.debug.print("\n", .{});
