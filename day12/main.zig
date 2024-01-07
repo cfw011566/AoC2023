@@ -54,7 +54,7 @@ fn solve(content: []const u8) !usize {
                         spring_test[unknows[i]] = '.';
                     }
                 }
-                var testGroups = try getTestGroups(spring_test);
+                const testGroups = try getTestGroups(spring_test);
                 if (std.mem.eql(usize, testGroups, groups)) {
                     sum += 1;
                 }
